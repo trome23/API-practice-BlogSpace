@@ -24,25 +24,26 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts')
         renderPost()
     })
 
-    newPost.addEventListener('submit', (e) => {
-        e.preventDefault()
-        let titleVal = postTitle.value
-        let bodyVal = postBody.value
-        const data = {
-            title: titleVal,
-            body: bodyVal
-        } 
-        fetch('https://apis.scrimba.com/jsonplaceholder/posts', { 
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json; charset=UTF-8'
-            }
-         })
-            .then(res => res.json())
-            .then(post => {
-                postArr.unshift(post)
-                renderPost()
+newPost.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let titleVal = postTitle.value
+    let bodyVal = postBody.value
+    const data = {
+        title: titleVal,
+        body: bodyVal
+    } 
+    fetch('https://apis.scrimba.com/jsonplaceholder/posts', { 
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8'
+        }
         })
+        .then(res => res.json())
+        .then(post => {
+            postArr.unshift(post)
+            renderPost()
     })
+    newPost.reset()
+})
 
