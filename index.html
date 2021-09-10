@@ -11,15 +11,19 @@
             <h3 id="nav-title">BlogSpace</h3>
         </nav>
 
-        <div class="container">
-            <label>Title:</label>
-            <input id="title-input">
-    
-            <label>Body:</label>
-            <input id="body-input">
-    
-            <div id="blog-list"></div>
-        </div>        
+        <form class="container">
+            <label for="post-title">Title:</label>
+            <input id="post-title" type="text">
+           
+            <label for="post-body">Body:</label>
+            <textarea id="post-body"></textarea>
+
+            <button type = "submit" id="post-btn">Submit</button>
+           
+        </form>     
+
+        <div id="blog-list"></div>
+           
 
 
         <script src="index.js"></script>

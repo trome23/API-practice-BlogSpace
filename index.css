@@ -7,7 +7,7 @@ html, body {
 nav {
     height: 30px;
     width: 100%;
-    background-color: burlywood;
+    background-color: rgb(224, 207, 185);
     padding: .25em;
     display: flex;
     align-items: center;
@@ -18,10 +18,31 @@ nav {
     margin: 0;
 }
 
-.container {
-    padding: 3em 1em;
+form {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 1em 0 1em;
+    color: rgb(104, 98, 98);
 }
 
 #blog-list {
- 
+    padding: 0 2em;
+    border-top: 1px solid gray;
+}
+
+#post-btn {
+    margin: 1em 0;
+    width: 5em;
+    height: 2em;
+    background-color: rgb(104, 98, 98);
+    color: white;
+    border: none;
+    border-radius: 5%;
+}
+
+#post-btn:hover,
+#post-btn:focus {
+    background-color: rgb(224, 207, 185);
+    color: black;
 }
