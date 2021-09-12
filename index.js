@@ -1,11 +1,10 @@
 const postTitle = document.querySelector("#post-title")
 const postBody = document.querySelector("#post-body")
 const blogList = document.querySelector("#blog-list")
-const postBtn = document.querySelector('#post-btn')
 const newPost = document.querySelector('#new-post')
 let postArr = []
 
-const renderPost = (e) => {
+const renderPost = () => {
     let html = ""
     for(let post of postArr) {
         html += `
